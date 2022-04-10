@@ -2,12 +2,17 @@
 generalized oulti-objective deep reinforcement learning algorithm
 
 ## Installation
-General:
-- Manually install tensorflow-gpu up to v. 1.14
+(1) General:
+- Manually install tensorflow-gpu up to v. 1.14 (e.g. `conda install tensorflow-gpu=1.14` with python version <= 1.4.)
 
-For DST:
-- Install ALE and fruitAPI following https://github.com/garlicdevs/Fruit-API
+(2.a) For DST:
+- Install ALE following https://github.com/garlicdevs/Fruit-API
+- Install fruitAPI
 
-For Deep Drawing:
+(2.b) For Deep Drawing:
 - Prerequisite: abaqus (Tested on V. 6.14), Student version should be sufficient
-- gym_fem https://github.com/johannes-dornheim/Reinforce-FE
+- Install gym_fem following https://github.com/johannes-dornheim/Reinforce-FE
+
+(3) General:
+
+- install gTLO (`pip install .` in gTLO root folder) 
