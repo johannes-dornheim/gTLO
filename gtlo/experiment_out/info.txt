@@ -1,0 +1,1 @@
+default experiment output folder (can be changed from the ini configurations)

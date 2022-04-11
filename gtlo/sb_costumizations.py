@@ -229,9 +229,8 @@ register_policy("gTLOdeepdrawing", CnnPolicyExtendedDeepDrawing)
 # register_policy("LnMlpPolicyExtended", LnMlpPolicyExtended)
 
 class MultibatchDQN(DQN):
-    def __init__(self, *args, batches_per_training=1, q_val_ret=False, generalizedTLO=False, **kwargs):
+    def __init__(self, *args, batches_per_training=1, generalizedTLO=False, **kwargs):
         self.batches_per_training = batches_per_training
-        self.q_val_ret = q_val_ret
         self.generalizedTLOModel = generalizedTLO
         super().__init__(*args, **kwargs)
 
@@ -344,9 +343,7 @@ class MultibatchDQN(DQN):
                     kwargs['update_param_noise_threshold'] = update_param_noise_threshold
                     kwargs['update_param_noise_scale'] = True
                 with self.sess.as_default():
-                    action, q = self.act(np.array(obs)[None], update_eps=update_eps, **kwargs)
-                    if self.q_val_ret:
-                        action = action[0]
+                    action = self.act(np.array(obs)[None], update_eps=update_eps, **kwargs)[0]
 
                 env_action = action
                 reset = False

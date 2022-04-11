@@ -16,3 +16,14 @@ generalized multi-objective deep reinforcement learning algorithm
 (3) General:
 
 - install gTLO (`pip install .` in gTLO root folder) 
+
+## Run presets / reproduce paper results
+experiments are managed by agents/morl_agent.py and configured in ini files. To reproduce the results presented within the gTLO paper, the example configurations can be used as follows:
+
+### DST
+- gTLQ: `python morl_agent.py --config ./ini_templates/configTMPL_DST_gTLO_250ksteps.ini`
+- outer-loop gTLQ: `python morl_agent.py --config ./ini_templates/configTMPL_DST_gTLO_outerloop_25kSteps.ini`
+- gLinear: `python morl_agent.py --config ./ini_templates/configTMPL_DST_gLinear_250kSteps.ini`
+- dTLO (baseline agent): run `study_starter.py` from the FruitAPI fork https://github.com/johannes-dornheim/Fruit-API
+
+### Deep Drawing

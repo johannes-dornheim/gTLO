@@ -45,7 +45,8 @@ def build_act(q_func, ob_space, ac_space, stochastic_ph, update_eps_ph, sess):
     output_actions = tf.cond(stochastic_ph, lambda: stochastic_actions, lambda: deterministic_actions)
     update_eps_expr = eps.assign(tf.cond(update_eps_ph >= 0, lambda: update_eps_ph, lambda: eps))
     _act = tf_util.function(inputs=[policy.obs_ph, stochastic_ph, update_eps_ph],
-                            outputs=(output_actions, policy.q_values),
+                            #outputs=(output_actions, policy.q_values),
+                            outputs=output_actions,
                             givens={update_eps_ph: -1.0, stochastic_ph: True},
                             updates=[update_eps_expr])
 

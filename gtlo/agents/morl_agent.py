@@ -206,7 +206,7 @@ if __name__ == '__main__':
 
         dqn_model = MultibatchDQN(policy, env, verbose=1, tensorboard_log=Path(outdir).joinpath('tensorboard_log'),
                                   full_tensorboard_log=True, policy_kwargs=policy_kwargs,
-                                  batches_per_training=batches_per_training, q_val_ret=True, generalizedTLO=genTLO,
+                                  batches_per_training=batches_per_training, generalizedTLO=genTLO,
                                   learning_starts=learning_starts, **dqn_kwargs)
 
         # ======================================= create evaluation ========================================================
@@ -243,20 +243,3 @@ if __name__ == '__main__':
         # ======================================= run agent ================================================================
         dqn_model.learn(training_steps, callback=dqn_callbacks)
         dqn_model.save(outdir.joinpath('model'))
-
-    # ==============================================================================================================
-
-    # deprecated parameters:
-    # reward_fun = 'generalized_tlo'
-    # assert reward_fun in ['scal_lin', 'scal_wmin', 'scal_tlo', 'generalized_tlo']
-    # extra_r = 0
-    # augmentation = False
-    # step_based_eval_interval = True
-    # extension_duelingq = False
-    # extension_doubleq = False
-    # step_state = False
-    # manipulate_state = True
-
-# minors (if time)
-# todo implement extension_duelingq for gTLO
-# todo implement extension_doubleq  for gTLO
