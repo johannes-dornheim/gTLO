@@ -7,6 +7,7 @@ setup(
     author="Johannes Dornheim",
     author_email='johannes.dornheim@mailbox.org',
     install_requires=[
+        'numpy>=1.20',
         'gym==0.18',
         'pillow>=4',
         'stable-baselines',
