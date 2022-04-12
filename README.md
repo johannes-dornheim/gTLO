@@ -29,3 +29,16 @@ experiments are managed by agents/morl_agent.py and configured in ini files. To 
 ### Deep Drawing
 - gTLQ: `python morl_agent.py --config ./preset_configs/DeepDrawing_gTLO.ini`
 - gLinear: `python morl_agent.py --config ./preset_configs/DeepDrawing_gLinear.ini`
+
+## Cite
+```
+@misc{https://doi.org/10.48550/arxiv.2204.04988,
+  author = {Dornheim, Johannes},
+  title = {gTLO: A Generalized and Non-linear Multi-Objective Deep Reinforcement Learning Approach},
+  publisher = {arXiv},
+  year = {2022},
+  doi = {10.48550/ARXIV.2204.04988},
+  url = {https://arxiv.org/abs/2204.04988},
+  
+}
+```
