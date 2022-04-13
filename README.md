@@ -3,7 +3,7 @@ generalized multi-objective deep reinforcement learning algorithm
 
 ## Installation
 (1) General:
-- Manually install tensorflow-gpu up to v. 1.14 (e.g. `conda install tensorflow-gpu=1.14` with python version <= 1.4.)
+- Manually install tensorflow-gpu up to v. 1.14 (e.g. `conda install tensorflow-gpu=1.14` with python version <= 3.4.)
 
 (2.a) For Deep-Sea Treasure Environment:
 - Install ALE following https://github.com/garlicdevs/Fruit-API
