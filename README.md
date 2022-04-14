@@ -27,7 +27,7 @@ experiments are managed by agents/morl_agent.py and configured in ini files. To 
 - dTLO (baseline agent): run `study_starter.py` from the FruitAPI fork https://github.com/johannes-dornheim/Fruit-API
 
 ### Deep Drawing
-- gTLQ: `python morl_agent.py --config ./preset_configs/DeepDrawing_gTLO.ini`
+- gTLO: `python morl_agent.py --config ./preset_configs/DeepDrawing_gTLO.ini`
 - gLinear: `python morl_agent.py --config ./preset_configs/DeepDrawing_gLinear.ini`
 
 ## Cite
